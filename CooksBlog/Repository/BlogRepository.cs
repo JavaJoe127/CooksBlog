@@ -3,7 +3,7 @@
 //   2015
 // </copyright>
 // <summary>
-//   The Blog Repository.
+//   The Blog Repository
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -17,7 +17,7 @@ namespace CooksBlog.Repository
     using NHibernate.Linq;
 
     /// <summary>
-    /// The Blog Repository
+    /// Initialize a new instance of the Blog Repository class
     /// </summary>
     public class BlogRepository: IBlogRepository
     {
@@ -27,7 +27,7 @@ namespace CooksBlog.Repository
         private readonly ISession session;
 
         /// <summary>
-        /// The Blog Repository constructor.
+        /// The Blog Repository constructor
         /// </summary>
         /// <param name="session">
         /// The session.
@@ -38,13 +38,13 @@ namespace CooksBlog.Repository
         }
 
         /// <summary>
-        /// The Posts.
+        /// The Posts
         /// </summary>
         /// <param name="pageNo">
-        /// The page number.
+        /// The page number
         /// </param>
         /// <param name="pageSize">
-        /// The page size.
+        /// The page size
         /// </param>
         /// <returns>
         /// The list of Posts
@@ -69,10 +69,10 @@ namespace CooksBlog.Repository
         }
 
         /// <summary>
-        /// The Total Posts.
+        /// The Total Posts
         /// </summary>
         /// <returns>
-        /// The number of posts.
+        /// The number of posts
         /// </returns>
         public int TotalPosts()
         {

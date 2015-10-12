@@ -3,7 +3,7 @@
 //   2015
 // </copyright>
 // <summary>
-//   The Cooks Blog Application.
+//   The Cooks Blog Application
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -17,15 +17,15 @@ namespace CooksBlog
     using Repository;
 
     /// <summary>
-    /// The Cooks Blog Application class.
+    /// Initialize a new instance of the Cooks Blog Application class
     /// </summary>
     public class CooksBlogApplication : NinjectHttpApplication
     {
         /// <summary>
-        /// The Create Kernel method.
+        /// The Create Kernel method
         /// </summary>
         /// <returns>
-        /// Returns Standard Kernel.
+        /// Returns Standard Kernel
         /// </returns>
         protected override IKernel CreateKernel()
         {
@@ -38,7 +38,7 @@ namespace CooksBlog
         }
 
         /// <summary>
-        /// The On Application Started method.
+        /// The On Application Started method
         /// </summary>
         protected override void OnApplicationStarted()
         {

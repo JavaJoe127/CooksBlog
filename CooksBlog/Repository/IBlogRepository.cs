@@ -3,7 +3,7 @@
 //   2015
 // </copyright>
 // <summary>
-//   The Blog Repository interface.
+//   The Blog Repository interface
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -14,18 +14,18 @@ namespace CooksBlog.Repository
     using Objects;
 
     /// <summary>
-    /// The Blog Repository interface.
+    /// Initialize a new instance of the Blog Repository interface
     /// </summary>
     interface IBlogRepository
     {
         /// <summary>
-        /// The Posts.
+        /// The Posts
         /// </summary>
         /// <param name="pageNo">
-        /// The type.
+        /// The type
         /// </param>
         /// <param name="pageSize">
-        /// The type.
+        /// The type
         /// </param>
         /// <returns>
         /// The <see cref="Post"/>.
@@ -33,7 +33,7 @@ namespace CooksBlog.Repository
         IList<Post> Posts(int pageNo, int pageSize);
 
         /// <summary>
-        /// The TotalPosts.
+        /// The TotalPosts
         /// </summary>
         /// <returns>
         /// The <see cref="int"/>

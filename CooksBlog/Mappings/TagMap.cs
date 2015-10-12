@@ -3,7 +3,7 @@
 //   2015
 // </copyright>
 // <summary>
-//   The Tag Mapping for blog database.
+//   The Tag Mapping for blog database
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -13,7 +13,7 @@ namespace CooksBlog.Mappings
     using Objects;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="TagMap"/> class.
+    /// Initializes a new instance of the <see cref="TagMap"/> class
     /// </summary>
     public class TagMap: ClassMap<Tag>
     {

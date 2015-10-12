@@ -3,7 +3,7 @@
 //   2015
 // </copyright>
 // <summary>
-//   The Repository Module.
+//   The Repository Module
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -21,12 +21,12 @@ namespace CooksBlog.Repository
     using Ninject.Web.Common;
 
     /// <summary>
-    /// The Repository Module class.
+    /// Initialize a new instance of the Repository Module class
     /// </summary>
     public class RepositoryModule : NinjectModule
     {
         /// <summary>
-        /// The Load method.
+        /// The Load method
         /// </summary>
         public override void Load()
         {

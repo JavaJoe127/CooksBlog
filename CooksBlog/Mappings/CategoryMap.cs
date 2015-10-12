@@ -3,7 +3,7 @@
 //   2015
 // </copyright>
 // <summary>
-//   The Category Mapping for blog database.
+//   The Category Mapping for blog database
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
@@ -13,7 +13,7 @@ namespace CooksBlog.Mappings
     using Objects;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="CategoryMap"/> class.
+    /// Initializes a new instance of the <see cref="CategoryMap"/> class
     /// </summary>
     public class CategoryMap: ClassMap<Category>
     {
