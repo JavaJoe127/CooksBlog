@@ -16,7 +16,7 @@ namespace CooksBlog.Controllers
     /// <summary>
     /// Initialize a new instance of the Blog Controller class
     /// </summary>
-    public class BlogController : Controller
+    public class BlogController: Controller
     {
         private readonly IBlogRepository blogRepository;
 
@@ -42,21 +42,13 @@ namespace CooksBlog.Controllers
         /// </returns>
         public ViewResult Posts(int page = 1)
         {
+            var posts = this.blogRepository.Posts(page - 1, 10);
+            var totalPosts = blogRepository.TotalPosts();
+
             var listViewModel = new ListViewModel(this.blogRepository, page);
 
             ViewBag.Title = "Latest Posts";
             return View("List", listViewModel);
-        }
-
-        /// <summary>
-        /// The Index
-        /// </summary>
-        /// <returns>
-        /// The result action
-        /// </returns>
-        public ActionResult Index()
-        {
-            return View();
         }
     }
 }

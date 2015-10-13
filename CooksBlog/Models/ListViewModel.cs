@@ -17,17 +17,17 @@ namespace CooksBlog.Controllers
     /// <summary>
     /// Initialize a new instance of List View Model class
     /// </summary>
-    internal class ListViewModel
+    public class ListViewModel
     {
         /// <summary>
         /// The Get or Set Posts property
         /// </summary>
-        public IList<Post> Posts { get; set; }
+        public IList<Post> Posts { get; private set; }
 
         /// <summary>
         /// The Get or Set Total Posts property
         /// </summary>
-        public int TotalPosts { get; set; }
+        public int TotalPosts { get; private set; }
 
         /// <summary>
         /// The List View Model constructor

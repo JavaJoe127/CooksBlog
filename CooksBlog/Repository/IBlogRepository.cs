@@ -16,7 +16,7 @@ namespace CooksBlog.Repository
     /// <summary>
     /// Initialize a new instance of the Blog Repository interface
     /// </summary>
-    interface IBlogRepository
+    public interface IBlogRepository
     {
         /// <summary>
         /// The Posts

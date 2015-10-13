@@ -145,7 +145,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BlogController.cs" />
-    <Compile Include="Controllers\ListViewModel.cs" />
+    <Compile Include="Models\ListViewModel.cs" />
     <Compile Include="CooksBlogApplication.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -153,7 +153,6 @@
     <Compile Include="Mappings\CategoryMap.cs" />
     <Compile Include="Mappings\PostMap.cs" />
     <Compile Include="Mappings\TagMap.cs" />
-    <Compile Include="Models\ListView.cs" />
     <Compile Include="Objects\Category.cs" />
     <Compile Include="Objects\Post.cs" />
     <Compile Include="Objects\Tag.cs" />
