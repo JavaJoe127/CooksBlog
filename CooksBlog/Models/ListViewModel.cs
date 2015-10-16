@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace CooksBlog.Controllers
+namespace CooksBlog.Models
 {
     using System.Collections.Generic;
 

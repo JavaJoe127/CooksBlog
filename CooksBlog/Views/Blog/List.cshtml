@@ -1,33 +1,22 @@
-﻿@model IEnumerable<ListViewModel>
+﻿@model CooksBlog.Models.ListViewModel
 
-@{
-    ViewBag.Title = "List";
-}
+<div id="content">
+    <h1>@ViewBag.Title</h1>
 
-<h2>List</h2>
+    @Html.Partial("_Pager", Model)
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TotalPosts)
-        </th>
-        <th></th>
-    </tr>
+    @if (Model.Posts.Count > 0)
+    {
+        foreach (var post in Model.Posts)
+        {
+            @Html.Partial("_PostTemplate", post)
+        }
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TotalPosts)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
+        @Html.Partial("_Pager", Model)
+    }
+    else
+    {
+        <p>No posts found!</p>
+    }
 
-</table>
+</div>

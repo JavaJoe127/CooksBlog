@@ -11,6 +11,7 @@ namespace CooksBlog.Controllers
 {
     using System.Web.Mvc;
 
+    using Models;
     using Repository;
 
     /// <summary>

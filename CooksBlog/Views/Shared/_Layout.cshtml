@@ -23,9 +23,9 @@
             <!-- Navigation -->
             <div id="menubar">
                 <ul id="menu">
-                    <li><a href="#">Posts</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">About Me</a></li>
+                    <li>@Html.ActionLink("Posts", "Posts")</li>
+                    <li>@Html.ActionLink("Contact", "Contact")</li>
+                    <li>@Html.ActionLink("About Me", "AboutMe")</li>
                 </ul>
             </div>
 
@@ -38,7 +38,7 @@
 
         <!-- Footer -->
         <div id="footer">
-            Copyright © @DateTime.Now.Year JustBlog All Rights Reserved
+            Copyright © @DateTime.Now.Year CooksBlog All Rights Reserved
         </div>
     </div>
 </body>
