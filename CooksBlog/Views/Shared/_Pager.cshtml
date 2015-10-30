@@ -4,6 +4,7 @@
     var currentPage = ViewContext.RequestContext.HttpContext.Request["p"] != null
          ? int.Parse(ViewContext.RequestContext.HttpContext.Request["p"])
          : 1;
+
     var totalPages = Math.Ceiling((double)Model.TotalPosts / 10);
 }
 

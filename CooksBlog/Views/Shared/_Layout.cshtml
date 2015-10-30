@@ -1,7 +1,14 @@
 ﻿<!DOCTYPE html>
+<!-- Reference Scripts -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+<script src="@Url.Content("~/Scripts/app.js")"></script>
+
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="website description" />
+    <meta name="keywords" content="website keywords, website keywords" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <!--<meta name="viewport" content="width=device-width" />-->
     <title>@ViewBag.Title</title>
 
     <!-- Stylesheets -->
@@ -15,8 +22,8 @@
         <div id="header">
             <div id="logo">
                 <div id="logo_text">
-                    <h1><a href="/">Just<span class="logo_colour">Blog</span></a></h1>
-                    <h2>Writings, Experiments and More...</h2>
+                    <h1><a href="/">cooks<span class="logo_colour">blog</span></a></h1>
+                    <h2>Cooking Recipies, Hints, Experiments and More...</h2>
                 </div>
             </div>
 
@@ -25,7 +32,7 @@
                 <ul id="menu">
                     <li>@Html.ActionLink("Posts", "Posts")</li>
                     <li>@Html.ActionLink("Contact", "Contact")</li>
-                    <li>@Html.ActionLink("About Me", "AboutMe")</li>
+                    <li>@Html.ActionLink("About Us", "AboutMe")</li>
                 </ul>
             </div>
 
@@ -33,12 +40,14 @@
 
         <!-- Site Content -->
         <div id="site_content">
+            @Html.Partial("_Search")
             @RenderBody()
         </div>
 
         <!-- Footer -->
         <div id="footer">
-            Copyright © @DateTime.Now.Year CooksBlog All Rights Reserved
+            <p>Content Copyright © @DateTime.Now.Year HotR and CooksBlog All Rights Reserved</p>
+            <p>Theme Copyright &copy; simplestyle_horizon | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">Simple web templates by HTML5</a></p>
         </div>
     </div>
 </body>

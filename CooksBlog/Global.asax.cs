@@ -1,18 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
-
-namespace CooksBlog
+﻿namespace CooksBlog
 {
-    public class MvcApplication : System.Web.HttpApplication
+    using System.Web.Routing;
+
+    using Ninject;
+    using Ninject.Web.Common;
+
+    using Core.Repository;
+
+    /// <summary>
+    /// Initialize a new instance of the Cooks Blog Application class
+    /// </summary>
+    public class MvcApplication : NinjectHttpApplication
     {
-        protected void Application_Start()
+        /// <summary>
+        /// The Create Kernel method
+        /// </summary>
+        /// <returns>
+        /// Returns Standard Kernel
+        /// </returns>
+        protected override IKernel CreateKernel()
         {
-            AreaRegistration.RegisterAllAreas();
+            var kernel = new StandardKernel();
+
+            kernel.Load(new RepositoryModule());
+            kernel.Bind<IBlogRepository>().To<BlogRepository>();
+
+            return kernel;
+        }
+
+        /// <summary>
+        /// The On Application Started method
+        /// </summary>
+        protected override void OnApplicationStarted()
+        {
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            base.OnApplicationStarted();
         }
     }
 }

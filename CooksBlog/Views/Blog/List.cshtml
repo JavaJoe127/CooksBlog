@@ -11,12 +11,12 @@
         {
             @Html.Partial("_PostTemplate", post)
         }
-
-        @Html.Partial("_Pager", Model)
     }
     else
     {
         <p>No posts found!</p>
     }
+
+    @Html.Partial("_Pager", Model)
 
 </div>

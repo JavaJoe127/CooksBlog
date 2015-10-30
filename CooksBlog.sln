@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CooksBlog", "CooksBlog\CooksBlog.csproj", "{B718CB90-63A2-446C-9658-300F162CED76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CooksBlog.Core", "..\CooksBlogCore\CooksBlog.Core\CooksBlog.Core.csproj", "{9B998D3D-D428-4D72-837C-D2F748EAFE4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B718CB90-63A2-446C-9658-300F162CED76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B718CB90-63A2-446C-9658-300F162CED76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B718CB90-63A2-446C-9658-300F162CED76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B998D3D-D428-4D72-837C-D2F748EAFE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B998D3D-D428-4D72-837C-D2F748EAFE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B998D3D-D428-4D72-837C-D2F748EAFE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B998D3D-D428-4D72-837C-D2F748EAFE4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

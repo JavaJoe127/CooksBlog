@@ -14,7 +14,7 @@ namespace CooksBlog
     using System.Web.Mvc;
     using System.Web.Mvc.Html;
 
-    using Objects;
+    using Core.Objects;
 
     /// <summary>
     /// The Action Link Extension class

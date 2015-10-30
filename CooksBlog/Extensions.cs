@@ -7,7 +7,7 @@
     {
         public static string ToConfigLocalTime(this DateTime utcDate)
         {
-            var timeZone = TimeZoneInfo.FindSystemTimeZoneById(ConfigurationManager.AppSettings["TimezoneAbbr"]);
+            var timeZone = TimeZoneInfo.FindSystemTimeZoneById(ConfigurationManager.AppSettings["Timezone"]);
             return string.Format("{0} ({1})", 
                 TimeZoneInfo.ConvertTimeFromUtc(utcDate, timeZone).ToShortDateString(), 
                 ConfigurationManager.AppSettings["TimezoneAbbr"]);

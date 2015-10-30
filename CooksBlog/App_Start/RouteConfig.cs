@@ -25,12 +25,25 @@ namespace CooksBlog
         /// </param>
         public static void RegisterRoutes(RouteCollection routes)
         {
+            // reminder - the maproutes go in order from first to last, Posts needs to be on the bottom
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Blog", action = "Posts", id = UrlParameter.Optional }
+                name: "Tag",
+                url: "Tag/{tag}",
+                defaults: new { controller = "Blog", action = "Tag" }
+                );
+
+            routes.MapRoute(
+                name: "Category",
+                url: "Category/{category}",
+                defaults: new { controller = "Blog", action = "Category" }
+                );
+
+            routes.MapRoute(
+                name: "Action",
+                url: "{action}",
+                defaults: new { controller = "Blog", action = "Posts" }
             );
         }
     }

@@ -1,4 +1,4 @@
-﻿USE [JustBlog]
+﻿USE [CooksBlog]
 GO
 /****** Object:  Table [dbo].[Tag]    Script Date: 11/10/2013 18:21:08 ******/
 SET ANSI_NULLS ON
