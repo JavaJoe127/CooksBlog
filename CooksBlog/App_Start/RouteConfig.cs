@@ -29,21 +29,27 @@ namespace CooksBlog
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Tag",
-                url: "Tag/{tag}",
-                defaults: new { controller = "Blog", action = "Tag" }
+                "Post",
+                "Archive/{year}/{month}/{title}",
+                new { controller = "Blog", action = "Post"}
                 );
 
             routes.MapRoute(
-                name: "Category",
-                url: "Category/{category}",
-                defaults: new { controller = "Blog", action = "Category" }
+                "Tag",
+                "Tag/{tag}",
+                new { controller = "Blog", action = "Tag" }
                 );
 
             routes.MapRoute(
-                name: "Action",
-                url: "{action}",
-                defaults: new { controller = "Blog", action = "Posts" }
+                "Category",
+                "Category/{category}",
+                new { controller = "Blog", action = "Category" }
+                );
+
+            routes.MapRoute(
+                "Action",
+                "{action}",
+                new { controller = "Blog", action = "Posts" }
             );
         }
     }

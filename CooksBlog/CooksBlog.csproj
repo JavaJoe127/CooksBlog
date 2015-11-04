@@ -190,6 +190,7 @@
     <Content Include="Views\Shared\_Pager.cshtml" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Views\Shared\_Search.cshtml" />
+    <Content Include="Views\Blog\Post.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
