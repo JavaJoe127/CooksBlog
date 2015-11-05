@@ -169,6 +169,7 @@
     <Content Include="Views\Blog\Post.cshtml" />
     <Content Include="Views\Shared\_Sidebars.cshtml" />
     <Content Include="Views\Shared\_Categories.cshtml" />
+    <Content Include="Views\Shared\_Tags.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
