@@ -91,6 +91,14 @@ namespace CooksBlog.Controllers
             return View("List", listViewModel);
         }
 
+        /// <summary>
+        /// The Search method
+        /// </summary>
+        /// <param name="search"></param>
+        /// <param name="page"></param>
+        /// <returns>
+        /// Returns view of all matching posts
+        /// </returns>
         public ViewResult Search(string search, int page = 1)
         {
             ViewBag.Title = string.Format(@"Lists of posts found for search text ""{0}""", search);
@@ -100,6 +108,15 @@ namespace CooksBlog.Controllers
             return View("List", viewModel);
         }
 
+        /// <summary>
+        /// The Post method
+        /// </summary>
+        /// <param name="year"></param>
+        /// <param name="month"></param>
+        /// <param name="title"></param>
+        /// <returns>
+        /// Returns a detailed view of a post
+        /// </returns>
         public ViewResult Post(int year, int month, string title)
         {
             var post = this.blogRepository.Post(year, month, title);
@@ -115,6 +132,19 @@ namespace CooksBlog.Controllers
             }
 
             return View(post);
+        }
+
+        /// <summary>
+        /// The Sidebars method
+        /// </summary>
+        /// <returns>
+        /// Returns the partial sidebar view
+        /// </returns>
+        [ChildActionOnly]
+        public PartialViewResult Sidebars()
+        {
+            var widgetViewModel = new WidgetViewModel(this.blogRepository);
+            return PartialView("_Sidebars", widgetViewModel);
         }
     }
 }

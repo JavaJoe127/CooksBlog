@@ -125,31 +125,6 @@
     <Content Include="Content\themes\basic\images\side_base.png" />
     <Content Include="Content\themes\basic\images\side_top.png" />
     <Content Include="Content\themes\basic\style.css" />
-    <Content Include="Content\themes\purple\admin.css" />
-    <Content Include="Content\themes\purple\images\content.png" />
-    <Content Include="Content\themes\purple\images\logo.png" />
-    <Content Include="Content\themes\purple\images\menu.png" />
-    <Content Include="Content\themes\purple\images\menu_select.png" />
-    <Content Include="Content\themes\purple\images\style.css" />
-    <Content Include="Content\themes\purple\style.css" />
-    <Content Include="Content\themes\simple7\admin.css" />
-    <Content Include="Content\themes\simple7\images\bullet.png" />
-    <Content Include="Content\themes\simple7\images\graphic.png" />
-    <Content Include="Content\themes\simple7\images\paperclip.png" />
-    <Content Include="Content\themes\simple7\images\pattern.png" />
-    <Content Include="Content\themes\simple7\images\style.css" />
-    <Content Include="Content\themes\simple7\style.css" />
-    <Content Include="Content\themes\simple\admin.css" />
-    <Content Include="Content\themes\simple\images\arrow.png" />
-    <Content Include="Content\themes\simple\images\back.png" />
-    <Content Include="Content\themes\simple\images\bullet.png" />
-    <Content Include="Content\themes\simple\images\graphic.png" />
-    <Content Include="Content\themes\simple\images\link.png" />
-    <Content Include="Content\themes\simple\images\logo.jpg" />
-    <Content Include="Content\themes\simple\images\logo.png" />
-    <Content Include="Content\themes\simple\images\search.png" />
-    <Content Include="Content\themes\simple\images\tabs.png" />
-    <Content Include="Content\themes\simple\style.css" />
     <Content Include="Content\themes\style.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -177,6 +152,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\WidgetViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +167,8 @@
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Views\Shared\_Search.cshtml" />
     <Content Include="Views\Blog\Post.cshtml" />
+    <Content Include="Views\Shared\_Sidebars.cshtml" />
+    <Content Include="Views\Shared\_Categories.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

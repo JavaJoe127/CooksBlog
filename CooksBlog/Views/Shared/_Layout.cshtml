@@ -13,7 +13,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" type="text/css"
-          href="@Url.Content("~/Content/themes/simple/style.css")" />
+          href="@Url.Content("~/Content/themes/basic/style.css")" />
 </head>
 <body>
     <div id="main">
@@ -42,6 +42,8 @@
         <div id="site_content">
             @Html.Partial("_Search")
             @RenderBody()
+
+            @Html.Action("Sidebars")
         </div>
 
         <!-- Footer -->
