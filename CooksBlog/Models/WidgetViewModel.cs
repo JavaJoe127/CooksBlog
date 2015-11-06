@@ -30,6 +30,11 @@ namespace CooksBlog.Models
         public IList<Tag> Tags { get; private set; }
 
         /// <summary>
+        /// The Get or Set Posts
+        /// </summary>
+        public IList<Post> LatestPosts { get; private set; }
+
+        /// <summary>
         /// The Widget View Model class constructor
         /// </summary>
         /// <param name="blogRepository"></param>
@@ -37,6 +42,7 @@ namespace CooksBlog.Models
         {
             Categories = blogRepository.Categories();
             Tags = blogRepository.Tags();
+            LatestPosts = blogRepository.Posts(0, 10);
         }
     }
 }
