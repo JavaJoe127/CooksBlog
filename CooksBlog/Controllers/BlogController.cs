@@ -11,6 +11,7 @@ namespace CooksBlog.Controllers
 {
     using System.Web;
     using System.Web.Mvc;
+    using System.Web.Security;
 
     using Models;
     using Core.Repository;
@@ -132,6 +133,50 @@ namespace CooksBlog.Controllers
             }
 
             return View(post);
+        }
+
+        /// <summary>
+        /// The Login as admin method
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="returnUrl"></param>
+        /// <returns>
+        /// Returns a view depending on success or failure to login
+        /// </returns>
+        [HttpPost, AllowAnonymous, ValidateAntiForgeryToken]
+        public ActionResult Login(LoginModel model, string returnUrl)
+        {
+            if (ModelState.IsValid)
+            {
+                if (Membership.ValidateUser(model.UserName, model.Password))
+                {
+                    FormsAuthentication.SetAuthCookie(model.UserName, false);
+
+                    if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                    {
+                        return Redirect(returnUrl);
+                    }
+
+                    return RedirectToAction("Manage");
+                }
+
+                ModelState.AddModelError("", "The user name or password provided is incorrect.");
+            }
+
+            return View();
+        }
+
+        /// <summary>
+        /// The Logout as admin method
+        /// </summary>
+        /// <returns>
+        /// Returns a public view after logging out
+        /// </returns>
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+
+            return RedirectToAction("Login", "Admin");
         }
 
         /// <summary>

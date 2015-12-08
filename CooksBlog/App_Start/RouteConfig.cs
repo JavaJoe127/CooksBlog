@@ -52,6 +52,12 @@ namespace CooksBlog
                 new { controller = "Admin", action = "Login" }
                 );
 
+            routes.MapRoute(
+                "Logout",
+                "Logout",
+                new { controlller = "Admin", action = "Logout" }
+                );
+
             // default route
             routes.MapRoute(
                 "Action",

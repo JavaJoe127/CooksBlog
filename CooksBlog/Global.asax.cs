@@ -6,6 +6,7 @@
     using Ninject.Web.Common;
 
     using Core.Repository;
+    using Providers;
 
     /// <summary>
     /// Initialize a new instance of the Cooks Blog Application class
@@ -24,6 +25,7 @@
 
             kernel.Load(new RepositoryModule());
             kernel.Bind<IBlogRepository>().To<BlogRepository>();
+            kernel.Bind<IAuthorizeProvider>().To<AuthorizeProvider>();
 
             return kernel;
         }
